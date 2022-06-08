@@ -11,7 +11,7 @@
 'use strict';
 (function() {    
 
-  if (typeof ADB === 'undefined') {
+  if (typeof ADB2 === 'undefined') {
     if (window && window.console && window.console.error) {
       console.error('Media exports are not found. \
 Make sure to include the Launch library to index.html and \
@@ -20,7 +20,7 @@ configure Adobe Media Analytics for Audio and Video extension (v2) to export API
     }
   }
     
-  var Media = ADB.Media;
+  var Media = ADB2.Media;
 
   function VideoAnalyticsProvider(player) {
     if (!player) {
