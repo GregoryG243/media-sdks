@@ -60,6 +60,8 @@ configure Adobe Media Analytics for Audio and Video extension (v2) to export API
     // Set to true if this is a resume playback scenario (not starting from playhead 0)
     // mediaInfo[Media.MediaObjectKey.MediaResumed] = true;
 
+    mediaInfo
+
     var contextData = {
       isUserLoggedIn: 'false',
       tvStation: 'Sample TV station',
@@ -68,7 +70,8 @@ configure Adobe Media Analytics for Audio and Video extension (v2) to export API
         
     // Set standard Video Metadata        
     contextData[Media.VideoMetadataKeys.Episode] = 'Sample Episode';
-    contextData[Media.VideoMetadataKeys.Show] = 'Sample Show';        
+    contextData[Media.VideoMetadataKeys.Show] = 'Sample Show';
+    contextData[Media.VideoMetadataKeys.Network] = 'test network';   
 
     this._mediaTracker.trackSessionStart(mediaInfo, contextData);
   };
